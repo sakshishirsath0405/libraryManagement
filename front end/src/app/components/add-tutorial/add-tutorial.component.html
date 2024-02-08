@@ -1,0 +1,38 @@
+<!-- <div id="container" [ngStyle]="{'background-color':  'red'}"> -->
+  <div  [ngStyle]="{backgroundImage:'url(../assets/images/pic.jpeg)'}">
+    <br>   <br>   <br> <br>   <br>   <br>
+    <div class="submit-form" style="background-color:bisque;">
+      @if (!submitted) {
+      <div class="form-group">
+      
+        <label for="title"><b>Student Name</b></label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          required
+          [(ngModel)]="tutorial.title"
+          name="title"
+        />
+      </div>
+  
+      <div class="form-group">
+        <label for="description"><b>Book Name</b></label>
+        <input
+          class="form-control"
+          id="description"
+          required
+          [(ngModel)]="tutorial.description"
+          name="description"
+        />
+      </div>
+  
+      <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      } @else {
+      <h4>Student was submitted successfully!</h4>
+      <button class="btn btn-success" (click)="newTutorial()">Add</button>
+      }
+    </div>
+    <br>   <br>   <br> <br>   <br>   <br>
+  </div>
+  

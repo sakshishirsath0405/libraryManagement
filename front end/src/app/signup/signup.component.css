@@ -1,0 +1,11 @@
+.full-width{
+    width: 100%;
+}
+.label{
+    display:pink;
+    width:130px;
+}
+.signup-form-container {
+    height: 100vh;
+    width: 100%;
+  }

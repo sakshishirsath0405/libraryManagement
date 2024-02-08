@@ -1,0 +1,90 @@
+<!-- <div class="container pt-5 pb-5">
+    <div class="col-12">
+        <div class="d-flex flex-wrap justify-content-between">
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Component</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Component</h5>
+                    <p class="card-text">Content itself is what the user derives value from. Thus, "content" can refer
+                        to the information provided through the medium, the way in which the information was presented,
+                        as well as the added features included in the medium in which that information was delivered.
+                        The medium, however, provides little to no value to the end-user without the information and
+                        experiences that make up the content.</p>
+                    <a class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Component</h5>
+                    <p class="card-text">Content itself is what the user derives value from. Thus, "content" can refer
+                        to the information provided through the medium, the way in which the information was presented,
+                        as well as the added features included in the medium in which that information was delivered.
+                        The medium, however, provides little to no value to the end-user without the information and
+                        experiences that make up the content.</p>
+                    <a class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Component</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Component</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+            <div class="card shadow mt-2">
+                <div class="card-body">
+                    <h5 class="card-title">Contact Component</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<div class="container pt-5 pb-5">
+<form (submit)="submit()"  class="form" [formGroup]="form">
+
+  <div class="form-group">
+    <label for="name-input">Name:</label>
+    <input id="name-input" type="text" class="form-control" formControlName="name">
+  </div>
+
+  <div class="form-group">
+    <label for="email-input">Email:</label>
+    <input id="email-input" type="email" class="form-control" formControlName="email">
+  </div>
+
+
+
+  <div class="form-group">
+    <label for="phone-input">Phone:</label>
+    <input id="phone-input" type="tel" class="form-control" formControlName="phone">
+  </div>
+  <div class="form-group">
+  <textarea  maxlength="256" placeholder="please share your comment ..." required></textarea>
+</div>
+  <div class="form-group">
+    <button
+            type="submit"
+            [disabled]="!form.valid"
+            class="btn btn-success float-right">
+      Submit
+    </button>
+  </div>
+
+</form>
+
+</div>

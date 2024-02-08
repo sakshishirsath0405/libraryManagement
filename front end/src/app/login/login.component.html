@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+<body>
+
+<h1>Library management system</h1>
+
+</body>
+</html>
+
+
+<div class="bootstrap-wrapper">
+    <br>
+    <div class="container mt" style="box-shadow: 5px 10px 18px #888888; width: 36%;">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <!-- <div class="container text-center">
+                    <img style="width: 100px;" class="img-fluid" src="/assets/profile.png" alt="">
+                </div> -->
+             
+                    <div class="text-center">
+                        <fa-icon [icon]="faLock" class="fa-5x"></fa-icon>
+                    </div>
+                 
+                <h3 class="text-center">Login</h3> 
+                
+                <form (ngSubmit)="loginUser()">
+                <!-- <form (ngSubmit)="onSubmit()"> -->
+                    <mat-form-field class="mb-3">
+                        <label>UserName</label>
+                        <input required [(ngModel)]="login.email" name="username"
+                        type="text" #control1="ngModel" matInput/>
+                        <mat-error *ngIf="control1.invalid && control1.invalid">  
+                            <div *ngIf="control1.errors?.['required']">Name is required</div>  
+                        </mat-error>  
+                    </mat-form-field>
+                    <mat-form-field class="mb-3">
+                        <label>Password</label>
+                        <input required [(ngModel)]="login.password" name="password"
+                        type="password" #control1="ngModel" matInput/>
+                        <mat-error *ngIf="control1.invalid && control1.invalid">  
+                            <div *ngIf="control1.errors?.['required']">password is required</div>  
+                        </mat-error> 
+                    </mat-form-field>
+                    <br>
+                    <br>
+                    <div class="container text-center">
+                        <button type="submit" class="btn btn-success">Login
+                        </button><br> 
+                        <br>
+                        <button type="reset" class="btn btn-danger" style="margin-left: 10px;"><a routerLink="../signup">Signup</a></button>
+                    
+                    </div>
+        
+                </form>
+            </div>
+            <br>
+            <br>
+    </div>
+    <br>
+    <br>
+</div>
+

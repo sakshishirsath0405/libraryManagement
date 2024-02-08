@@ -1,0 +1,52 @@
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+label{display:pink;
+
+width:300px}
+
+
+</style>
+
+</head>
+<body style="background-color: powerblue;">
+    <p style="background-image: url('../assets/images/pic.png');"></p>
+
+
+<h1>Library management system</h1>
+
+
+<div class="container mt-5 ">
+    <div class="row">
+      <div class="col-10 mx-auto">
+        <div class="row">
+          <div class="col-2 background-color text-white">
+            <h5 class="text-center">SignUp</h5>
+          </div>
+          <div class="col-8 shadow p-3">
+            <!-- <h5 class="text-center">SignUp</h5> -->
+            <img src="../assets/images/signup.png" alt="Girl in a jacket" width="100" height="100"><br><br>
+
+            <!-- <div class="alert alert-danger" *ngIf="login.password">Email Already Exist</div> -->
+            <form [formGroup]="signupForm" (ngSubmit)="loginUser()">
+            <input type="text" name="full_name" placeholder="Full Name"   formControlName="full_names" class="form-control mb-3" [(ngModel)]="login.full_name">
+            <input type="number" name="phone_no" placeholder="Phone Number"  formControlName="phone_nos" class="form-control mb-3" [(ngModel)]="login.phone_no">
+            <input type="email" name="email" placeholder="Email"  formControlName="emails" class="form-control mb-3" [(ngModel)]="login.email" required>
+            <input type="text" name="address" placeholder="Address"  formControlName="addresss" class="form-control mb-3" [(ngModel)]="login.address">
+            <input type="password" name="password" placeholder="Password"  formControlName="passwords" class="form-control mb-3" [(ngModel)]="login.password">
+            <button [formGroup]="signupForm" class="btn btn-dark w-100" >Sign_Up</button> <br>
+            <span>You have an account already?<a routerLink="/login">Sign_In</a></span>
+            </form>
+          </div>
+        </div>
+      </div>
+    
+    </div>
+  </div>
+
+
+</body>
+</html>

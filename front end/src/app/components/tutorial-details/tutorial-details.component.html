@@ -1,0 +1,86 @@
+
+<div id="container" [ngStyle]="{'background-color':  'ivory'}"> 
+  <br>   <br>   <br> 
+@if (viewMode){
+  @if (currentTutorial.id){
+  <h3>How Many User Requested For Books</h3>
+  <div>
+    <table >
+      <th>
+    <label><strong>Student Name:</strong></label> {{ currentTutorial.title }}</th>
+    <th ><label><strong>Book Description:</strong></label>
+    {{ currentTutorial.description }}</th>
+    <th><label><strong>Status Book:</strong></label>
+    {{ currentTutorial.published ? "Published" : "Pending" }}</th><br><br><br><br><br><br><br><br><br>
+    <th><label><strong>Edit</strong></label>  <a class="badge badge-warning" routerLink="/admin/tutorials/{{ currentTutorial.id }}">
+      Edit
+    </a></th>
+  </table>
+  </div>
+  <div>
+    
+  </div>
+  <div>
+   
+  </div>
+
+
+  } @else {<p>Please click on a Student...</p>}
+} @else {
+  @if (currentTutorial.id) {
+  <div class="edit-form">
+    <h4>How Many Student Request For Books</h4>
+    <form>
+      <div class="form-group">
+        <label for="title">Student Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          [(ngModel)]="currentTutorial.title"
+          name="title"
+        />
+      </div>
+      <div class="form-group">
+        <label for="description">Book Description</label>
+        <input
+          type="text"
+          class="form-control"
+          id="description"
+          [(ngModel)]="currentTutorial.description"
+          name="description"
+        />
+      </div>
+
+      <div class="form-group">
+        <label><strong> Book Status:</strong></label>
+        {{ currentTutorial.published ? "Published" : "Pending" }}
+      </div>
+    </form>
+
+    @if (currentTutorial.published) {
+    <button class="badge badge-primary mr-2"
+      (click)="updatePublished(false)" >
+      UnPublish
+    </button>
+    } @else {
+    <button class="badge badge-primary mr-2" (click)="updatePublished(true)">
+      Publish
+    </button>
+    }
+
+    <button class="badge badge-danger mr-2" (click)="deleteTutorial()">
+      Delete
+    </button>
+
+    <button
+      type="submit"
+      class="badge badge-success mb-2"
+      (click)="updateTutorial()">
+      Update
+    </button>
+    <p>{{ message }}</p>
+  </div>
+  } @else {<p>Cannot access this Book...</p>}
+} <br>   <br>   <br> 
+</div>
